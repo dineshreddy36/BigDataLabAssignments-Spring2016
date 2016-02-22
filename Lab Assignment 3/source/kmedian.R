@@ -1,0 +1,6 @@
+raw=kcca(lab,k=3)
+image(raw)
+barplot(lab)
+raw1=kcca(lab,k=2,family=kccafamily("Kmedians"),control=list(initcent="kmeanspp"))
+image(raw1)
+points(lab)

@@ -1,0 +1,20 @@
+K Means clustering on data set :  Educational Process Mining (EPM): A Learning Analytics Data Set
+
+
+Assuming lab.csv is the test data
+
+lab=read.csv("lab.csv")   // loading the data into lab variable
+
+View(lab)      // Displays the data stored in lab
+
+results<-kmeans(lab,3) //applying kmeans clustering algorithm on Lab data with k value as 3
+
+results   //   displays the results after performing kmeans algorithm
+
+results$size   // gives the size of clusters
+
+results$cluster   //   gives the clustering vector for the results
+
+plot(lab[c("Student.ID","TOTAL..100.points.")],col= results$cluster)   // plots the graph between two attributes differentiated by assigning each color to a cluster
+
+plot(lab[c("ES.1.1...2.points.","ES.1.2...3.points.")],col= results$cluster)   // plots graph with a different pait of attributes from the input data grouping each cluster with a color
